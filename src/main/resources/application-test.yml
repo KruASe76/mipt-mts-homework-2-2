@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: mipt-mts-homework-test
+  jpa:
+    hibernate:
+      ddl-auto: create
+  flyway:
+    enabled: false
+
+server:
+  port: 6666
+
+logging:
+  level:
+    me.kruase.mipt: DEBUG
+    org.springframework.data.cassandra: DEBUG
