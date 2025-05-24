@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: mipt-mts-homework
+  cassandra:
+    local-datacenter: datacenter1
+    contact-points: 127.0.0.1
+    port: 9042
+    keyspace-name: kruase_keyspace
+    schema-action: none
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: shutdown
+      base-path: /admin
+
+server:
+  tomcat:
+    threads:
+      min-spare: 10
+      max: 200
